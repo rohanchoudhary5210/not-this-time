@@ -1,0 +1,52 @@
+# Godot 4 - generated/imported files
+.godot/
+
+# Godot editor metadata
+.editor/
+
+# Exported builds
+*.apk
+*.aab
+*.exe
+*.app
+*.dmg
+*.zip
+
+# OS generated files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE / Editor files
+.vscode/
+.idea/
+
+# VS Code specific
+*.code-workspace
+
+# Visual Studio
+.vs/
+*.csproj
+*.sln
+*.user
+*.userprefs
+
+# Mono / C# generated files (if using Godot .NET)
+bin/
+obj/
+
+# Build/cache directories
+build/
+dist/
+
+# Temporary files
+*.tmp
+*.temp
+*.log
+
+# Crash dumps
+*.dmp
+
+# Backup files
+*.bak
+*~
