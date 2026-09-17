@@ -1,0 +1,32 @@
+{
+	"defaults": {
+		"name":"Test",
+		"scene": "res://scenes/level_scene.tscn"
+	},
+	"levels": [
+		{
+			"id": 1,
+			"name":"The Push",
+			"description":"Woman simply pushes you toward the cliff. Player learns movement.",
+			"rules": ["woman_push"]
+		},
+		{
+			"id": 2,
+			"name":"Just Die",
+			"description":"Woman does nothing to you.",
+			"rules": ["strong_push", "grab_railing"]
+		},
+		{
+			"id": 3,
+			"name":"The Railing",
+			"description":"The railing can stop the fall, but only from one direction.",
+			"rules": [""]
+		},
+		{
+			"id": 4,
+			"name":"The Gap",
+			"description":"A small section of railing is missing; player has to position himself correctly.",
+			"rules": [""]
+		}
+	]
+}

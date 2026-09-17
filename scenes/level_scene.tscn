@@ -1,0 +1,161 @@
+[gd_scene format=3 uid="uid://brmhlwxgqm6wh"]
+
+[ext_resource type="Script" uid="uid://f5qd0m6ju8pu" path="res://scripts/level_scene.gd" id="1_fkwfp"]
+[ext_resource type="Script" uid="uid://bcd87mux5c5xe" path="res://scripts/death_zone.gd" id="1_i2aat"]
+[ext_resource type="PackedScene" uid="uid://csvpaqh6jq3vb" path="res://scenes/player.tscn" id="1_m802k"]
+[ext_resource type="Script" uid="uid://brvegr4ry26hp" path="res://scripts/gameplay_ui.gd" id="3_2djvx"]
+[ext_resource type="Texture2D" uid="uid://7knotniydr16" path="res://assets/sprites/button.png" id="4_uvc87"]
+[ext_resource type="Script" uid="uid://dakanb78l40wb" path="res://scripts/enemy.gd" id="6_eohcs"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_m802k"]
+size = Vector2(400, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_i2aat"]
+size = Vector2(1000, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uvc87"]
+size = Vector2(200, 20)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qdh5e"]
+texture = ExtResource("4_uvc87")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_50wog"]
+texture = ExtResource("4_uvc87")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1ey3t"]
+texture = ExtResource("4_uvc87")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_uvc87"]
+texture = ExtResource("4_uvc87")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_t0hvh"]
+texture = ExtResource("4_uvc87")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_kfebt"]
+texture = ExtResource("4_uvc87")
+
+[node name="LevelScene" type="Node2D" unique_id=2141574045]
+script = ExtResource("1_fkwfp")
+
+[node name="Environment" type="Node2D" parent="." unique_id=1263921510]
+
+[node name="Gameplay" type="Node2D" parent="." unique_id=874376032]
+
+[node name="Ground" type="StaticBody2D" parent="Gameplay" unique_id=80057812]
+position = Vector2(201, 434)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Gameplay/Ground" unique_id=926495824]
+shape = SubResource("RectangleShape2D_m802k")
+
+[node name="Polygon2D" type="Polygon2D" parent="Gameplay/Ground" unique_id=1884587635]
+color = Color(1, 0.48235294, 1, 1)
+polygon = PackedVector2Array(-200, -10, 200, -10, 200, 10, -200, 10)
+
+[node name="DeathZone" type="Area2D" parent="Gameplay" unique_id=1603230973]
+position = Vector2(609, 719)
+collision_layer = 0
+script = ExtResource("1_i2aat")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Gameplay/DeathZone" unique_id=869520348]
+shape = SubResource("RectangleShape2D_i2aat")
+
+[node name="Ground2" type="StaticBody2D" parent="Gameplay" unique_id=1495809784]
+position = Vector2(1180, 434)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Gameplay/Ground2" unique_id=581802142]
+shape = SubResource("RectangleShape2D_uvc87")
+
+[node name="Polygon2D" type="Polygon2D" parent="Gameplay/Ground2" unique_id=1395886743]
+color = Color(1, 0.48235294, 1, 1)
+polygon = PackedVector2Array(-102, -11, 99, -11, 99, 9, -101, 10)
+
+[node name="LevelCamera" type="Camera2D" parent="." unique_id=2058482684 groups=["camera"]]
+position = Vector2(640, 360)
+process_callback = 0
+limit_enabled = false
+
+[node name="Player" parent="." unique_id=247219086 instance=ExtResource("1_m802k")]
+position = Vector2(276, 392)
+
+[node name="GameplayUI" type="CanvasLayer" parent="." unique_id=1712946644]
+script = ExtResource("3_2djvx")
+
+[node name="Control" type="Control" parent="GameplayUI" unique_id=1468767802]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Level" type="Label" parent="GameplayUI/Control" unique_id=831247862]
+layout_mode = 1
+offset_right = 344.0
+offset_bottom = 91.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 30
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Instruction" type="Label" parent="GameplayUI/Control" unique_id=1161626750]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -344.0
+offset_bottom = 91.0
+grow_horizontal = 0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 30
+text = "WAIT AND WATCH"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Right" type="Button" parent="GameplayUI/Control" unique_id=2005323973]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -47.0
+offset_top = -111.0
+offset_right = 16.671997
+offset_bottom = -47.328003
+grow_horizontal = 0
+grow_vertical = 0
+rotation = 1.5707964
+theme_override_styles/normal = SubResource("StyleBoxTexture_qdh5e")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_50wog")
+theme_override_styles/hover = SubResource("StyleBoxTexture_1ey3t")
+
+[node name="Left" type="Button" parent="GameplayUI/Control" unique_id=1784725751]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 47.0
+offset_top = -49.0
+offset_right = 110.672
+offset_bottom = 14.671997
+grow_vertical = 0
+rotation = -1.5707964
+theme_override_styles/normal = SubResource("StyleBoxTexture_uvc87")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_t0hvh")
+theme_override_styles/hover = SubResource("StyleBoxTexture_kfebt")
+
+[node name="Women" parent="." unique_id=2092670483 instance=ExtResource("1_m802k")]
+position = Vector2(147, 390)
+script = ExtResource("6_eohcs")
+speed = 0.0
+jump_velocity = 0.0
+
+[connection signal="body_entered" from="Gameplay/DeathZone" to="Gameplay/DeathZone" method="_on_body_entered"]
+[connection signal="button_down" from="GameplayUI/Control/Right" to="GameplayUI" method="_on_right_button_down"]
+[connection signal="button_up" from="GameplayUI/Control/Right" to="GameplayUI" method="_on_right_button_up"]
+[connection signal="button_down" from="GameplayUI/Control/Left" to="GameplayUI" method="_on_left_button_down"]
+[connection signal="button_up" from="GameplayUI/Control/Left" to="GameplayUI" method="_on_left_button_up"]
+
+[editable path="Women"]
