@@ -1,31 +1,307 @@
 {
 	"defaults": {
-		"name":"Test",
+		"name": "Test",
 		"scene": "res://scenes/level_scene.tscn"
 	},
 	"levels": [
 		{
 			"id": 1,
-			"name":"The Push",
-			"description":"Woman simply pushes you toward the cliff. Player learns movement.",
+			"name": "The Push",
+			"description": "Woman simply pushes you toward the cliff. Player learns movement.",
 			"rules": ["woman_push"]
 		},
 		{
 			"id": 2,
-			"name":"Just Die",
-			"description":"Woman does nothing to you.",
+			"name": "Just Die",
+			"description": "Woman does nothing to you.",
 			"rules": [""]
 		},
 		{
 			"id": 3,
-			"name":"The Railing",
-			"description":"The railing can stop the fall, but only from one direction.",
+			"name": "The Railing",
+			"description": "The railing can stop the fall, but only from one direction.",
 			"rules": ["the_railing"]
 		},
 		{
 			"id": 4,
-			"name":"The Gap",
-			"description":"A small section of railing is missing; player has to position himself correctly.",
+			"name": "The Gap",
+			"description": "A small section of railing is missing; player has to position himself correctly.",
+			"rules": [""]
+		},
+		{
+			"id": 5,
+			"name": "",
+			"description": "",
+			"rules": [""]
+		},
+		{
+			"id": 6,
+			"name": "Keep Trying",
+			"description": "You need to die 3 times in order to pass through the next level",
+			"rules": [""]
+		},
+		{
+			"id": 7,
+			"name": "Die After Her",
+			"description": "The player needs to die but only after the enemy dies",
+			"rules": [""]
+		},
+		{
+			"id": 8,
+			"name": "",
+			"description": "",
+			"rules": [""]
+		},
+		{
+			"id": 9,
+			"name": "",
+			"description": "",
+			"rules": [""]
+		},
+		{
+			"id": 10,
+			"name": "",
+			"description": "",
+			"rules": [""]
+		},
+		{
+			"id": 11,
+			"name": "",
+			"description": "",
+			"rules": [""]
+		},
+		{
+			"id": 12,
+			"name": "",
+			"description": "",
+			"rules": [""]
+		},
+		{
+			"id": 13,
+			"name": "",
+			"description": "",
+			"rules": [""]
+		},
+		{
+			"id": 14,
+			"name": "",
+			"description": "",
+			"rules": [""]
+		},
+		{
+			"id": 15,
+			"name": "",
+			"description": "",
+			"rules": [""]
+		},
+		{
+			"id": 16,
+			"name": "",
+			"description": "",
+			"rules": [""]
+		},
+		{
+			"id": 17,
+			"name": "",
+			"description": "",
+			"rules": [""]
+		},
+		{
+			"id": 18,
+			"name": "",
+			"description": "",
+			"rules": [""]
+		},
+		{
+			"id": 19,
+			"name": "",
+			"description": "",
+			"rules": [""]
+		},
+		{
+			"id": 20,
+			"name": "",
+			"description": "",
+			"rules": [""]
+		},
+		{
+			"id": 21,
+			"name": "",
+			"description": "",
+			"rules": [""]
+		},
+		{
+			"id": 22,
+			"name": "",
+			"description": "",
+			"rules": [""]
+		},
+		{
+			"id": 23,
+			"name": "",
+			"description": "",
+			"rules": [""]
+		},
+		{
+			"id": 24,
+			"name": "",
+			"description": "",
+			"rules": [""]
+		},
+		{
+			"id": 25,
+			"name": "",
+			"description": "",
+			"rules": [""]
+		},
+		{
+			"id": 26,
+			"name": "",
+			"description": "",
+			"rules": [""]
+		},
+		{
+			"id": 27,
+			"name": "",
+			"description": "",
+			"rules": [""]
+		},
+		{
+			"id": 28,
+			"name": "",
+			"description": "",
+			"rules": [""]
+		},
+		{
+			"id": 29,
+			"name": "",
+			"description": "",
+			"rules": [""]
+		},
+		{
+			"id": 30,
+			"name": "",
+			"description": "",
+			"rules": [""]
+		},
+		{
+			"id": 31,
+			"name": "",
+			"description": "",
+			"rules": [""]
+		},
+		{
+			"id": 32,
+			"name": "",
+			"description": "",
+			"rules": [""]
+		},
+		{
+			"id": 33,
+			"name": "",
+			"description": "",
+			"rules": [""]
+		},
+		{
+			"id": 34,
+			"name": "",
+			"description": "",
+			"rules": [""]
+		},
+		{
+			"id": 35,
+			"name": "",
+			"description": "",
+			"rules": [""]
+		},
+		{
+			"id": 36,
+			"name": "",
+			"description": "",
+			"rules": [""]
+		},
+		{
+			"id": 37,
+			"name": "",
+			"description": "",
+			"rules": [""]
+		},
+		{
+			"id": 38,
+			"name": "",
+			"description": "",
+			"rules": [""]
+		},
+		{
+			"id": 39,
+			"name": "",
+			"description": "",
+			"rules": [""]
+		},
+		{
+			"id": 40,
+			"name": "",
+			"description": "",
+			"rules": [""]
+		},
+		{
+			"id": 41,
+			"name": "",
+			"description": "",
+			"rules": [""]
+		},
+		{
+			"id": 42,
+			"name": "",
+			"description": "",
+			"rules": [""]
+		},
+		{
+			"id": 43,
+			"name": "",
+			"description": "",
+			"rules": [""]
+		},
+		{
+			"id": 44,
+			"name": "",
+			"description": "",
+			"rules": [""]
+		},
+		{
+			"id": 45,
+			"name": "",
+			"description": "",
+			"rules": [""]
+		},
+		{
+			"id": 46,
+			"name": "",
+			"description": "",
+			"rules": [""]
+		},
+		{
+			"id": 47,
+			"name": "",
+			"description": "",
+			"rules": [""]
+		},
+		{
+			"id": 48,
+			"name": "",
+			"description": "",
+			"rules": [""]
+		},
+		{
+			"id": 49,
+			"name": "",
+			"description": "",
+			"rules": [""]
+		},
+		{
+			"id": 50,
+			"name": "",
+			"description": "",
 			"rules": [""]
 		}
 	]

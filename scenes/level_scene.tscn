@@ -11,7 +11,7 @@
 size = Vector2(400, 20)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_i2aat"]
-size = Vector2(1000, 20)
+size = Vector2(1500, 20)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uvc87"]
 size = Vector2(200, 20)
@@ -43,37 +43,36 @@ script = ExtResource("1_fkwfp")
 
 [node name="Gameplay" type="Node2D" parent="." unique_id=874376032]
 
-[node name="Ground" type="StaticBody2D" parent="Gameplay" unique_id=80057812]
-position = Vector2(201, 434)
+[node name="GroundLeft" type="StaticBody2D" parent="Gameplay" unique_id=80057812]
+position = Vector2(201, 600)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Gameplay/Ground" unique_id=926495824]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Gameplay/GroundLeft" unique_id=926495824]
 shape = SubResource("RectangleShape2D_m802k")
 
-[node name="Polygon2D" type="Polygon2D" parent="Gameplay/Ground" unique_id=1884587635]
+[node name="Polygon2D" type="Polygon2D" parent="Gameplay/GroundLeft" unique_id=1884587635]
 color = Color(1, 0.48235294, 1, 1)
 polygon = PackedVector2Array(-200, -10, 200, -10, 200, 10, -200, 10)
 
 [node name="DeathZone" type="Area2D" parent="Gameplay" unique_id=1603230973]
-position = Vector2(609, 719)
+position = Vector2(958, 912)
 collision_layer = 0
 script = ExtResource("1_i2aat")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Gameplay/DeathZone" unique_id=869520348]
 shape = SubResource("RectangleShape2D_i2aat")
 
-[node name="Ground2" type="StaticBody2D" parent="Gameplay" unique_id=1495809784]
-position = Vector2(1180, 434)
+[node name="GroundRight" type="StaticBody2D" parent="Gameplay" unique_id=1495809784]
+position = Vector2(100, 600)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Gameplay/Ground2" unique_id=581802142]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Gameplay/GroundRight" unique_id=581802142]
 shape = SubResource("RectangleShape2D_uvc87")
 
-[node name="Polygon2D" type="Polygon2D" parent="Gameplay/Ground2" unique_id=1395886743]
+[node name="Polygon2D" type="Polygon2D" parent="Gameplay/GroundRight" unique_id=1395886743]
 color = Color(1, 0.48235294, 1, 1)
 polygon = PackedVector2Array(-102, -11, 99, -11, 99, 9, -101, 10)
 
 [node name="Railing" type="StaticBody2D" parent="Gameplay" unique_id=1494123225]
-visible = false
-position = Vector2(389, 411)
+position = Vector2(389, 579)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Gameplay/Railing" unique_id=320378842]
 shape = SubResource("RectangleShape2D_ifeun")
@@ -83,7 +82,6 @@ disabled = true
 polygon = PackedVector2Array(-10, -10, 10, -10, 10, 10, -10, 10)
 
 [node name="LevelCamera" type="Camera2D" parent="." unique_id=2058482684 groups=["camera"]]
-position = Vector2(640, 360)
 process_callback = 0
 limit_enabled = false
 
@@ -135,8 +133,8 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = -47.0
 offset_top = -111.0
-offset_right = 16.671997
-offset_bottom = -47.328003
+offset_right = 23.0
+offset_bottom = -41.0
 grow_horizontal = 0
 grow_vertical = 0
 rotation = 1.5707964
@@ -151,8 +149,8 @@ anchor_top = 1.0
 anchor_bottom = 1.0
 offset_left = 47.0
 offset_top = -49.0
-offset_right = 110.672
-offset_bottom = 14.671997
+offset_right = 117.0
+offset_bottom = 21.0
 grow_vertical = 0
 rotation = -1.5707964
 theme_override_styles/normal = SubResource("StyleBoxTexture_uvc87")
