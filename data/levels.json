@@ -14,7 +14,7 @@
 			"id": 2,
 			"name":"Just Die",
 			"description":"Woman does nothing to you.",
-			"rules": ["strong_push", "grab_railing"]
+			"rules": [""]
 		},
 		{
 			"id": 3,

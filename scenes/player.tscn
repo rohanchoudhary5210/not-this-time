@@ -308,3 +308,4 @@ autoplay = "idle"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1057099231]
 position = Vector2(0, 2)
 shape = SubResource("CapsuleShape2D_b5e5s")
+
