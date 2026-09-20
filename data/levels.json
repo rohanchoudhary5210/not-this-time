@@ -20,7 +20,7 @@
 			"id": 3,
 			"name":"The Railing",
 			"description":"The railing can stop the fall, but only from one direction.",
-			"rules": [""]
+			"rules": ["the_railing"]
 		},
 		{
 			"id": 4,

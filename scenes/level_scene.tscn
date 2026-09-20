@@ -16,6 +16,8 @@ size = Vector2(1000, 20)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uvc87"]
 size = Vector2(200, 20)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ifeun"]
+
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qdh5e"]
 texture = ExtResource("4_uvc87")
 
@@ -68,6 +70,17 @@ shape = SubResource("RectangleShape2D_uvc87")
 [node name="Polygon2D" type="Polygon2D" parent="Gameplay/Ground2" unique_id=1395886743]
 color = Color(1, 0.48235294, 1, 1)
 polygon = PackedVector2Array(-102, -11, 99, -11, 99, 9, -101, 10)
+
+[node name="Railing" type="StaticBody2D" parent="Gameplay" unique_id=1494123225]
+visible = false
+position = Vector2(389, 411)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Gameplay/Railing" unique_id=320378842]
+shape = SubResource("RectangleShape2D_ifeun")
+disabled = true
+
+[node name="Polygon2D" type="Polygon2D" parent="Gameplay/Railing" unique_id=1320098810]
+polygon = PackedVector2Array(-10, -10, 10, -10, 10, 10, -10, 10)
 
 [node name="LevelCamera" type="Camera2D" parent="." unique_id=2058482684 groups=["camera"]]
 position = Vector2(640, 360)

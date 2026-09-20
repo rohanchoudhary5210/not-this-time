@@ -6,7 +6,7 @@ var active_rules: Dictionary = {}
 const RULE_REGISTRY: Dictionary = {
 	"woman_push": preload("res://scripts/rules/woman_push_rule.gd"),
 	"strong_push": preload("res://scripts/rules/strong_push_rule.gd"),
-	"grab_railing": preload("res://scripts/rules/grab_railing_rule.gd")
+	"the_railing": preload("res://scripts/rules/the_railing_rule.gd")
 }
 
 func apply_rules(rules: Array, scene_root: Node2D) -> void:
